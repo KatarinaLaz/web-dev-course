@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repeat Grid</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-rows: repeat(2, 200px); /* This means that 2 rows will be created, both with the height of 200px */
+      grid-template-columns: repeat(2, 200px); /* This means that 2 columns will be created, both with the width of 200px */
+      grid-auto-rows: 300px; /* When we create a new row that doesn't fit within the grid, give the row 300px in height - can do the same for columns */
+      /* This is an easier way to create the chessboard form the 10.0 exercise */
+    }
+
+    .grid-item {
+      font-size: 3rem;
+      background-color: darkviolet;
+      border: 5px solid goldenrod;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Repeat</h1>
+  <div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+  </div>
+</body>
+
+</html>

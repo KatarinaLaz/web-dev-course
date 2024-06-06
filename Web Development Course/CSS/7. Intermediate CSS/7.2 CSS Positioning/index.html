@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS Positioning Exercise</title>
+  <style>
+    /* Write your code here */
+    /* 
+    Create a cyrcle using CSS - border-radius: 50%;
+    */
+
+    .red-circle {
+      background-color: red;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      position: absolute;
+      top: 150px;
+      left: 250px;
+    }
+
+    .blue-box {
+      background-color: blue;
+      height: 300px;
+      width: 500px;
+      position: relative;
+      top: 200px;
+      left: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="blue-box">
+    <div class="red-circle">
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+<!-- 
+
+Positioning examples:
+https://appbrewery.github.io/css-positioning/
+
+1. Static positioning - the default one, default html positioning and behavior
+
+  - When we add another item it goes to the bottom of whatever previous element there is
+
+  position: static; - we don't really need to apply this, it is applied by default
+
+2. Relative positioning - relative to its default position (static postition) - takes the default position and allows us to apply changes to it's position
+
+  position: relative;
+  left: 50px; - moves it 50px to the left relative to the default position (this would have no effect if position was static)
+  top: 50px;  - moves is 50px to the bottom relative to the default position (this would have no effect if position was static)
+
+3. Absolute positioning - position is relative to the nearest positioned ancestor - if there is no positioned ancestor it gets positioned relative to the top left corner of the webpage
+
+ -When an element has the Absolute position it is taken out of the original html flow and put into a separate layer - we are able to change its Z-Index to put if in front of
+ or behind the html flow elements (if it has a Z-Index of 0 it will still go in front of the html flow), but it can't be a part of that flow
+
+  For example: We have box1 and box2. Box2 is a smaller box inside box1. Box1 has a relative position.
+               Box2's absolute position will be relative to box1's position, not to its default (static) position
+
+4. Fixed positioning - relative to the top left corner of the browser window (not webpage) - this means even if we scroll up and down on the webpage, it will still be positioned 
+relative to the browser (scrolling doesn't make it go away - we can't scroll past it)
+
+--------------------------------------------
+
+Z-Index - determines which elements go on top of which - higher Z-Index goes in front of lower Z-Index elements
+Default Z-Index is 0 of all elements
+
+--------------------------------------------
+
+If we look at the box model we can see that the position is outside of the margin box, meaning we can also add margins to positioned elements
+
+ -->

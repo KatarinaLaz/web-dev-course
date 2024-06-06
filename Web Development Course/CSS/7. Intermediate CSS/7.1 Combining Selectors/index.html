@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Combining CSS Selectors</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<!-- Don't change any of the HTML code! -->
+
+<body>
+  <h1>To Do List</h1>
+  <h2>Monday</h2>
+  <div class="box">
+    <p class="done">Do these things today!</p>
+    <ul class="list">
+      <li>Wash Clothes</li>
+      <li class="done">Read</li>
+      <li class="done">Maths Questions</li>
+    </ul>
+  </div>
+
+  <ul>
+    <p class="done">Other items</p>
+  </ul>
+  <p>The best preparation for tomorrow is doing your best today.</p>
+
+</body>
+
+</html>
+
+
+<!-- 
+
+Different ways to combine CSS selectors:
+
+1. Group rule - done using a comma (,) - applies same styles to several sectors
+
+selector, selector {
+  color: blueviolet;
+}
+
+--------------------------------------------------------
+
+2. Child rule - we use > to select the direct child of another selector (one level deep/nested)
+
+selector1 > selector2 {
+  color: firebrick;
+}
+
+selector1 = parent
+selector2 = child
+
+--------------------------------------------------------
+
+3. Descendents rule
+
+.inner-box p {
+  color: white;
+}
+
+.inner-box = ancestor
+p = descendents
+
+- What this does is it finds all .inner-box elements and then finds all of it descendants (all of the elements inside the element) that have the "p" tag and applies the change to them
+
+Example:
+
+<div class="inner-box">
+  <p></p>     - this element will be changed
+  <div>
+    <p></p>   - this element will be changed
+  </div>
+  <div>
+    <p></p>   - this elemetn will change
+  <div>
+</div>
+
+--------------------------------------------------------
+
+4. Chaining rule - applies where all selectors are true
+
+selectorselector {
+  color: seagreen;
+}
+
+<h1 id="title" class="big heading">Hello World</h1>
+
+h1#title.big.heading {
+  color: seagreen;
+}
+
+
+- If were using the element in the rule, it has to go first, we can't say:
+
+#title.bigh1 {
+  color: seagreen;
+}
+
+--------------------------------------------------------
+
+5. Combining combinations
+
+selector selectorselector {
+  font-size: 2rem;
+}
+
+ -->

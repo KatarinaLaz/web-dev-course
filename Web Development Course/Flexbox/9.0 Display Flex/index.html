@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Column Layout Methods</title>
+  <style>
+    p {
+      padding: 0;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .container {
+      display: flex;
+      gap: 10px; /* gap between each item */
+      padding: 10px;
+      background-color: gold;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <p>Page Layout Methods</p>
+
+    <li><a href="./html-table.html">HTML Table</li>
+    <li><a href="./inline-block.html">Inline-Block</li>
+    <li><a href="./absolute-position.html">Absolute Positioning</li>
+    <li><a href="./float.html">Float</li>
+    <li><a href="./flex.html">Flexbox</li>
+
+  </div>
+</body>
+
+</html>
+
+<!-- 
+
+When we set the display property to "flex" we no loger play with the same display rules
+
+"inline", "block", "inline-block", etc. display values no longer do anything and should not be used together with Flex, if we go that route
+
+"inline-flex" - allows it to occupy as much space as it needs, but other elements can be put into the same line
+
+ -->

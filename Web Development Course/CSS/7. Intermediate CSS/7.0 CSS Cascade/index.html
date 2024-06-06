@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Cascade</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div id="outer-box" class="box">
+    <div class="box">
+      <p>Yellow Text</p>
+      <div class="box inner-box">
+        <p class="white-text">White Text</p>
+      </div>
+    </div>
+    <div class="box">
+      <p>Yellow Text</p>
+      <div class="box inner-box">
+        <p class="white-text">White Text</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<!-- 
+
+When we have a style conflict, for example: An element has an inline style, but there is also an external style afecting it
+
+---------------------------
+
+"Index.html"
+
+<ol>
+  <li style="colorL red">One</li>
+  <li>Two</li>
+  <li>Three</li>
+</ol>
+
+"styles.css"                                 - In a case like this, the inline style will take precedence over the external style and that one list item will be red, while the other will be green
+
+li{
+  color:green;
+}
+----------------------------
+
+Hierarchy:
+
+- Position - this is also part of the hierarchy - this overrides none
+
+  Example 1 - two conflicting rules withing one rule set: 
+    li {
+      color: red;                     applies red first, but then the green overrides the red - final result is green
+      color: green;
+    }
+
+  Example 2 - two conflicting rule sets:
+    li {
+      color: red;
+    }
+
+    li {
+      color: green;                   applies red first, but then the green overrides the red - final result is green
+    }
+
+---------------------------
+
+- Specificity - this is also part of the hierarchy - this overrides Position
+
+<li id="first-id" class="first-class" draggable>
+
+li { color: blue;}                - element selector - least specific - overrides none
+.first-class {color: red;}        - class selector
+li[draggable] {color: purple;}    - attribute selecotr (some say that this is the same level as class, but most of the time it will override the class styles)
+#first-id {colorL orange;}        - id selector - most specific - overrides all
+
+---------------------------
+
+- Type - this is also part of the hierarchy - this overrides Position and Type
+
+1. External style - looks at this first (style.css)
+2. Internal style - looks at this second and overrides any conflict with External styles (<style></style>)
+3. Inline style - looks at this last and overrides any conflict with External or Internal styles (style="")
+
+---------------------------
+
+- Importance - this is also part of the hierarchy - this overrides Position, Type and Specificity
+
+This utilizes the !important keyword
+
+color: red;
+color: green !important; - ensures that his will be the most important rule relative to that element - none of the other hierarchy rules can override this
+
+ -->

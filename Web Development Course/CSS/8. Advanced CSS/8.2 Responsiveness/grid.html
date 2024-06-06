@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid</title>
+  <style>
+    .grid-container {
+      display: grid; /* telling the CSS that we're using the Grid system inside this container */
+      grid-template-columns: 1fr 1fr; /* we're goind to have 2 columns and both will be 1 fraction (divided into 2 equal fractions of the screen) (we can use any measurement other than fr, too) */
+      grid-template-rows: 100px 200px 200px; /* create 3 rows with different heights (we can use any measurement here, too, including fractions) */
+      gap: 30px; /* gap between each row and column */
+    }
+
+    .first {
+      grid-column: span 2; /* this row will span 2 columns (merge first 2 columns for this row) */
+    }
+
+    .card {
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS Grid</h1>
+  <div class="grid-container">
+    <div class="first card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+  </div>
+
+</body>
+
+</html>
+
+<!-- 
+
+Whole separate section in the course for learning Grid
+
+display: grid; 0 applied to the element (usually a div) that contains the elements we want in a grid format (grid-container in this case)
+
+Through Grid we can define how the columns and rows are goind to be displayed
+
+ -->

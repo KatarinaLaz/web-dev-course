@@ -1,0 +1,55 @@
+<!-- 
+
+The 12 column layout system
+
+3 Components:
+
+1. a <div> that has a "container" class
+2. inside the first <div> container we need another one that has the class "row"
+3. inside the "row" div we will have items that will be layed out using the column system
+
+Example:
+<div class="container">
+    <div class="row">
+        <div class="col">Hello</div>
+    </div>
+</div>
+
+When we have multiple columns in one row, bootstrap will try to automatically space them equally (give them the same width) across the entire width of the container
+
+The bootsrap "container" class is responsive - it will have different sizes on diferent screens by default. Look at the table bellow (the numbers indicate the width of the viewport):
+
+                Extra small       Small        Medium           Large           X-Large        XX-Large
+                   <576px       >=576px        >=768px         >=992px         >=1200px        >=1400px
+
+.container          100%          540px         720px           960px           1140px          1320px      - container gives a margin on the sides - foldable phones and really narrow phones
+.container-sm       100%          540px         720px           960px           1140px          1320px      - this is the same as .container - mobile devices
+.container-md       100%          100%          720px           960px           1140px          1320px      - tablets and iPads
+.container-lg       100%          100%          100%            960px           1140px          1320px      - laptops
+.container-xl       100%          100%          100%            100%            1140px          1320px      - desktops
+.container-xxl      100%          100%          100%            100%            100%            1320px      - bigger screens like TV
+.container-fluid    100%          100%          100%            100%            100%            100%        -fluid container has an edge-to-edge behavior
+
+We can use the naming convention "col-2", "col-6", "col-3", etc for column items to specify how many of the 12 columns we want a specific column to occupy
+Bootstrap will automatically assign the width based on the naming
+
+  col-2       col-4                     col-6
+-------------------------------------------------------------
+|       |               |                                   |
+|       |               |                                   |
+|       |               |                                   |
+-------------------------------------------------------------
+
+Bootsrap help us not need Meadia Queries that much because it has it's own pre-build breakpoints
+
+col-xl-4 => this would be applied to screen sizes between 1200px and 1399px - if the screen is smaller than this, it will default to give each <div> 100% (one under the other)
+
+We can combine different size spedcification on one div. For example:
+
+.col-sm-12 .col-md-8 .col-lg-4 - this means that for large screens and above it will take up 4 out 12 spaces, on medium and above it wil ltake up 8/10 spaces, and on small 12/12
+On bigger screen we can make the content smaller because it is still visible due to the size of the screen, on smaller screens we want to make it bigger so that it is visible
+
+.col - atomatically adjust the size to take up any remaining portions out of the 12 - in the table above (col-2 col-4 col-6), if we wrote "col" instead of "col-6" it would still
+        take up 6/12 portions because that's what's remaining
+
+ -->

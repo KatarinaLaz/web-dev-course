@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Flexbox</title>
+  <style>
+    .flex-container {
+      display: flex; /* telling CSS that we're using the Flexbox system inside this container */
+    }
+
+    .card {
+      background: blue;
+      border: 30px solid white;
+      height: 100px;
+      flex: 1; /* makes each card have an equal width distribution - we use portions like this instead of pixels because it makes the website responsive */
+    }          /* the portion size will vary depending on the size of the screen */
+
+    .first {
+      flex: 2; /* has twice the width of regualr flexboxes (we sat regular to 1 in .card) */
+    }
+
+    .second {
+      flex: 0.5; /* has half the width of regualr flexboxes (we sat regular to 1 in .card) */
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS Flexbox</h1>
+  <div class="flex-container">
+    <div class="first card"></div>
+    <div class="second card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+  </div>
+
+
+</body>
+
+</html>
+
+<!-- 
+
+Whole separate section in the course for learning Flexbox
+
+Grid allows us to create 2D layouts, while Flexbox allows us to create 1D layouts - everything is layed out in boxes in either a horizontal or vertical line
+
+ -->

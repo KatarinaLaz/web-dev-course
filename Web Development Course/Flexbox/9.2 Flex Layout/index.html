@@ -1,0 +1,35 @@
+<!-- 
+
+**** CHEATSHEET FOR ALL OF THIS SO YOU DON'T HAVE TO REMEMBER: ****
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+ -->
+
+<!-- 
+
+Properties:
+
+* order - set on container child(ren) - by default is "0" - we can give elements a specific order to rearrange them on the screen
+- bigger number goes to the right for "row" and down for "column"
+
+* flex-wrap - set on container - by default is "nowrap" 0 - when the width of elements is bigger than the width of the screen it will be pushed to the end (right),
+off screen and will not go into the next line - this is also not responsive, the more we shrink the screen,
+the more items are pushed off screen and the user won't be able to see them - we can use the "wrap" option to
+move elements that don't have enough space on the same line onto the next line
+
+* justify-content - set on container - by default is "flex-start" - everything is bunched up to the left - sets the distriubution of content across the main axis
+
+* align-items - set on container - by default is "flex-start" - sets the distibution across the cross axis - the height of the container needs to be set and have space
+-- DOES NOT WORK WITH flex-wrap: wrap; --
+Example:
+
+align-items: flex-end;
+height: 60vh; - vh = viewport height (the window that we're viewing the page on) - 100vh is 100% of the viewport
+
+* align-content - only works with "flex-wrap: wrap" - set on container
+
+* align-self - set on container child(ren) - if we want an element in a container to have a different alignment from the other, we need to set it's align-self property
+to what we want it to have - makes the item separate from the group
+
+ -->

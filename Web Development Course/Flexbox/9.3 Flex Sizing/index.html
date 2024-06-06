@@ -1,0 +1,35 @@
+<!-- 
+
+Priority list for flex item sizes
+
+1. min-width / max-width - flexbox looks at these properties first - if not set it looks at flex-basis next
+
+min-width - by default is the minimum width required to fit all of the text inside using wrapping (usually determined by the longest word unless there is height to think about, too) -
+            if we give it a value we determine what the minimal width of the item is, it can be bigger, but not smaller
+max-width - by default is the minimum width required to have the entire text in one line, so no wrapping -
+            if we give it a value we determine what the maximum width of the item is, it can be smaller, but not bigger
+
+2. flex-basis - set width on a row basesd, or height on a column based flexbox item - if not set it looks at Width/Height next -
+                if we shrink the screen too much so all items can't fit in the container with the desired
+                value for height and/or width it ignores the width/heigh and uses the content width solution
+
+3. Width (row) / Height (column) - if not set it looks at the Content width - if we shrink the screen too much so all items can't fit in the container
+                                    with the desired value for height and/or width it ignores the width/heigh and uses the content width solution
+
+4. Content width - default behavior without any width properties set - the minimum content width that allows the text inside the box to be next to eachother -
+                    if the screen is shrunk than it allows the text to wrap and uses the width of widest row -
+                    if screen becomes even smaller than the width of the widest row the content gets pushed off the page
+
+-------------------------------------------------
+
+* flex-grow - default is 0 (zero) - 0 is off, 1 is on - will grow to max-width if its set, or to the size of the content if max-width is not set
+
+* flex-shrink - default is 1 - 0 is off, 1 is on - will shrink to min-width if its set, or to the size of the content if min-width is not set
+
+* flex-basis - default is "auto" - auto gives a different size based on the content (items with more content get more width)
+* flex-basis: 0; - turns of the "auto" way of sizing - all items are the same size
+
+** flex: 1 1 0; - first value is flex-grow, second is flex-shrink, and third is flex-basis
+*** flex: 1; - an even shorter way to write the above values (1 1 0) because they are so common
+
+ -->

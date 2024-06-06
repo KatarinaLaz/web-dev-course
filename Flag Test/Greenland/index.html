@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS Positioning Exercise</title>
+  <style>
+
+    .flag {
+        height: 600px;
+        width: 900px;
+        background-color: white;
+        background: linear-gradient(to top, red 50%, red 0%, white 50%, white 0%);
+    }
+
+    .circle {
+        height: 250px;
+        width: 250px;
+        background-color: red;
+        border-radius: 50%;
+        position: relative;
+        left: 20%;
+        top: 175px;
+        background: linear-gradient(to top, white 50%, white 0%, red 50%, red 0%);
+    }
+
+    body {
+        margin: 0px;
+        background-color: black;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="flag">
+    <div class="circle"></div>
+  </div>
+</body>
+
+</html>

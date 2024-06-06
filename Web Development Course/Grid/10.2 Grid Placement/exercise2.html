@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Placement</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      height: 100vh;
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: 1fr 1fr 1.5fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .item {
+      font-size: 5rem;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: blueviolet;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .cowboy {
+      background-color: #00B9FF;
+      grid-column: span 2; /* This tells the item to start where it is meant to start and then span as many columns as we specify */
+      /* The code above (grid-column) is a shothand for the following code */
+      /* grid-column-start: span 2; - this determines where the item should start in the grid column
+         grid-column-end: auto; - this determines where the item should end in the grid column
+
+         We can give specific track numbers that we want the item to go accross:
+        grid-column-start: 2; - regardless of where the div is placed in html, it's starting point will be the second column - all other divs move acordingly (to it's right by default)
+        grid-column-end: 4; - regardless of where the div is placed in html, it's ending point will be the fourth column - all other divs move acordingly (to it's right by default)
+
+         We can also use negative values:
+        grid-column-end: -1; - the righthand most line in the grid - don't use other minuses, they are confusing - this one is good to mark the end of the width
+        grid-column-start: 1; - the left hand most line in the grid
+
+        grid-column-start: auto; - the default position where the item would be without us setting it manually - same for grid-column-end
+
+        grid-column-start: 4;
+        grid-column-end: 2; - we can even do this and it will span from 2 to 4
+
+        grid-row (and all options after "-", like start and end) also exists
+      */
+    }
+
+    .astronaut {
+      background-color: #03989E;
+      order: 1;
+      grid-column: span 2;
+
+      /* TODO: Make the astronaut box look like the goal2 image. */
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item cowboy">🤠</div>
+    <div class="item astronaut">👨‍🚀</div>
+    <div class="item book">📖</div>
+  </div>
+</body>
+
+</html>

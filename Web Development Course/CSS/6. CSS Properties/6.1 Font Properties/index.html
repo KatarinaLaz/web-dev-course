@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Properties</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: cornflowerblue;
+      color: white;
+      font-size: 18px;
+    }
+
+    /* Don't change the CSS above, add Your CSS below */
+
+    #coral {
+      color: coral;
+    }
+
+    #font-size{
+      font-size: 2rem;
+    }
+
+    #font-weight {
+      font-weight: 900;
+    }
+
+    #caveat {
+      font-family: "Caveat", cursive;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    #align-right {
+      text-align: end;
+    }
+
+    html {
+      font-size: 30px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <h1>Important CSS Properties</h1>
+  <p id="coral">Color</p>
+  <p id="font-size">Font Size</p>
+  <p id="font-weight">Font Weight</p>
+  <p id="caveat">Font Family</p>
+  <p id="align-right">Text Align</p>
+</body>
+
+</html>
+
+<!-- 
+
+Font size measurements:
+
+1. 1px - pixel
+
+2. 1pt - point - matches the Word sizing - 12pt is the same as 12 in a Word document
+
+3. 1em - full width of the letter m (the widest character in the English alphabet) - relative to the parent - this means that is an h1 has the font size of 1em- if it had a parent that enclosed the h1 tag and it had a font size of 20px, the h1 would also have a size of 20px (100% of the parent)
+1em = 100% of the parent font size
+2em = 200% of the parent font size (twice as big)
+etc...
+
+4. 1rem - relative to the root of the html file (usualy <html></html>)
+
+Recommendation is to use rem instead of em as the parent child hierarchy cn become really complicated and hard to track/manage
+
+Useful site for importing fonts: https://fonts.google.com/
+
+Font weight - from 100 to 900
+
+ -->

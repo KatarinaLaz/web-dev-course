@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Size Grid</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-rows: 100px auto; /* "auto" for rows means that the row will change height to try and fit the content inside */
+      grid-template-columns: 200px auto; /* this means that the first column will be 200px wide, and the seond column will be as wide as the rest of the screen width allows -
+                                            it is responsive */
+    }
+
+    .grid-item {
+      font-size: 3rem;
+      background-color: darkviolet;
+      border: 5px solid goldenrod;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Auto Size Grid</h1>
+  <div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+  </div>
+</body>
+
+</html>

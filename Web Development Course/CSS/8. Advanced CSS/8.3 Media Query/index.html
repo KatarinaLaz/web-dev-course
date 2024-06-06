@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+TODO: Change the background color for each device
+[lightsalmon] Mobile Devices: 319px — 480px
+[powderblue] iPads and Tablets: 481px — 1200px
+[limegreen] Laptops: 1201px — 1600px
+[seagreen] Desktops: 1601px and more
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <title>Media Query</title>
+  <style>
+
+    @media (min-width: 1601px) {
+      body {
+      background-color: seagreen;
+    }
+    }
+
+    @media (min-width: 1201px) and (max-width: 1600px) {
+      body {
+        background-color: limegreen;
+      }
+    }
+
+    @media (min-width: 481px) and (max-width: 1200px) {
+      body {
+        background-color: powderblue;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        background-color: lightsalmon;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+</body>
+
+</html>
+
+<!-- 
+
+1. Screen size:
+
+max-width - affects sizes that are this big or smaller
+min-width - affects sizes that are this big or bigger
+
+@media (max-width: 600px) {
+  /* Styles screen sizes equal to or less than 600px */
+}
+
+@media (min-width: 600px) {
+  /* Styles screen sizes equal to or more than 600px */
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  /* Styles screen sizes between 300px and 600px */
+}
+
+******************************************************************
+
+2. Screen orientation - not neccessary by default - not recommended for writing normal media queries - styles are applied to all screen orientation by default
+
+landscape
+portrait
+
+@media screen(orientation: landscape) {
+  /* Styles for landscape orientation */
+}
+
+Screen - the device it's being applied to
+
+3. Print - device it's being applied to, in this case printers - applied only when the website is being printed to give it a different layout
+
+@media print {
+  /* Styles for when the website is printed printing */
+}
+
+ -->

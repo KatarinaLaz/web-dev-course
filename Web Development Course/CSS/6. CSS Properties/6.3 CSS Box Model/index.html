@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Box Model</title>
+  <style>
+    div {
+      height: 200px;
+      width: 200px;
+    }
+
+    p {
+      margin: 0px;
+    }
+
+    #div-1 {
+      background-color: cadetblue;
+      padding: 20px;
+      border: 10px solid black;
+    }
+
+    #div-2 {
+      background-color: gold;
+      border: solid black;
+      border-width: 20px 10px;
+      margin-left: 260px;
+    }
+
+    #div-3 {
+      background-color: indianred;
+    border: 10px solid black;
+    margin-left: 40px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div id="div-1">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at sapien porttitor urna elementum lacinia. In
+      id magna pulvinar, ultricies lorem id, vehicula elit. Aliquam eu luctus nisl, vitae pellentesque magna. Phasellus
+      dolor metus, laoreet ac convallis sit amet, efficitur sed dolor.</p>
+  </div>
+
+  <div id="div-2">
+    
+  </div>
+
+  <div id="div-3">
+    
+  </div>
+
+
+  <!-- TODOs:
+-->
+
+</body>
+
+</html>
+
+<!-- 
+
+border: 10px solid black; (thickness, style, color)
+border-top: 0px - changes a single border (the top one) - in this case it makes it invisible - first the border: is applied, but then border-top: is applied and changes the previous styles
+
+style - solid, dashed
+
+border-width - 0px 10px 20px 30px - top, right, bottom, left - able to set only 2 values; 10px 20px - 10px would affect top and bottom, 20px would affect left and right; able to set only one value - affects all size
+
+padding - space between the element and border - can also take 1, 2 or 4 numbers like the border
+margin - space between border and outside content (other elements) - can also take 1, 2 or 4 numbers like the border
+
+Every element creates its own box
+
+<div></div> - content division element - invisible until we apply css style - We can create our own boxes, too, which is useful when we want to group several elements, for example
+Because divs are invisible it can be hard to debbug them - there's a free Chrome extension that helps with this - Pesticide
+
+ -->
