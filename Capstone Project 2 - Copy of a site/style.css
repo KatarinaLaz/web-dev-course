@@ -1,0 +1,133 @@
+body {
+    background-color: #575B66;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    margin-top: 3px;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    font-family: "Poppins", sans-serif;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    margin: 0px;
+}
+
+button {
+    font-family: "Poppins", sans-serif;
+}
+
+.main {
+    background-color: #40444B;
+    height: 100vh;
+    margin: 100px;
+    border: 28px solid #2A2F38;
+    border-radius: 70px;
+    box-shadow: 0.1px 0.1px 500px #3E424B, -60px 60px 40px 0px #2B2F39;
+}
+
+.icon {
+    height: 24px;
+    width: 24px;
+    border-radius: 35%;
+    margin-right: 10px;
+}
+
+#logo {
+    display: grid;
+    justify-content: center;
+}
+
+#logo-image {
+    border-radius: 50%;
+    width: 75px;
+    height:75px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.nav-button {
+    color: white;
+    font-size: 11px;
+    display: flex;
+    width: 100%;
+    align-items: left;
+    padding: 7px;
+    align-items: center;
+    border: 0px;
+    border-radius: 10px;
+    background-color: #40444B;
+}
+
+.active-nav {
+    background-image: linear-gradient(to right, #D2C3CE, #F3E0D7);
+    color: #A8564F;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    font-weight: bolder;
+}
+
+#docs {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: 1vh;
+    width: 90%;
+    height: 12vh;
+    background-color: #ECD6D1;
+    border-radius: 10px;
+    padding: 6%;
+}
+
+#doc-button {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    justify-content: center;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+}
+
+.grid-container {
+    display: grid;
+}
+
+.flex-container {
+    display: flex;
+}
+
+#left-nav {
+    flex-direction: column;
+    width: 13vw;
+    border-radius: 3rem;
+}
+
+.flex-nav {
+    flex-direction: column;
+    padding: 11%;
+    padding-right: 15%;
+    height: 95vh;
+}
+
+.flex-nav > div > p {
+    font-size: 10px;
+    color: white;
+    padding-left: 7px;
+}
+
+#main-body {
+    width: 80vw;
+    background-image: linear-gradient(to right, #DCCBD1, #F4E1D7);
+    border-radius: 3rem;
+}
