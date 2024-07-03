@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Hello!</h1>
+
+    <input type="checkbox">
+
+    <button class="bttn">Click Me</button>
+
+    <ul>
+        <li>
+            <a href="https://www.google.com">Google</a>
+        </li>
+        <li class="list">Second</li>
+        <li class="list">Third</li>
+    </ul>
+
+    <script src="index.js"></script>
+</body>
+</html>
+
+<!-- title.innerHTML - gives/changes the value that is between the tags (<h1><strong>Hello</strong></h1>) => this will return "<strong>Hello</strong>" -->
+<!-- title.textContent - gives only the textual content that is between tags - for the same example as above, it would return "Hello" -->
+
+<!-- This means that if we use title.innerHTML = "<em>Good Bye</em>" to assign html to the element (make sure to use ""), but we can't do this with title.textContent -->
+
+<!-- 
+
+- Style Manipulation:
+
+    element.style.color = "blue"; - this would change the color of the element text to "blue"
+
+    Important link with all possible style manipulations with JS: https://www.w3schools.com/jsref/dom_obj_style.asp
+
+- Class Manipulation:
+
+    1. Get all element classes:
+        element.classList;
+
+    2. Add a new class to an element:
+        element.classList.add("invisible"); - "invisible" is the name of the class that we have defined somewhere with css
+
+    3. Remove a class from an element:
+        element.classList.remove("invisible");
+
+    4. Toggle a class on or off for an element - if it's there remove it, if it isn't add it
+        element.classList.toggle("invisible");
+
+
+- Attribute Manipulation:
+
+    1. Get all element attributes:
+        element.attributes; - returns a list of all the attributes that the element has
+
+    2. Get specific element attribute value:
+        element.getAttribute("href"); - "href" is the attribute whose value we want
+
+    3. Set attribute value
+        element.setAttribute("href", "https://www.google.com"); - "href" is the attribute, "google" is the new value we are assigning to it
+
+
+-->
