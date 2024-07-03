@@ -15,13 +15,65 @@ var plus = document.querySelector("#plus");
 var ce = document.querySelector("#ce");
 var back = document.querySelector("#back");
 var dot = document.querySelector("#dot");
-var equals = document.querySelector("#input");
+var equals = document.querySelector("#equals");
 var input = document.querySelector("input");
 
-var nums = document.querySelectorAll("num");
+var nums = document.querySelectorAll(".num");
+var saves = document.querySelectorAll(".save");
+
+var num1 = 0;
+var num2 = 0;
+var operator = "";
 
 for(const num of nums) {
     num.addEventListener("click", function() {
-        input.innerHTML = input.innerText + num;
-    })
+        if (input.value == 0) {
+            input.value = "";
+        }
+        input.value = input.value + num.innerHTML;
+    });
+}
+
+for(var save of saves) {
+    save.addEventListener("click", function () {
+        num1 = input.value;
+
+        if(save.id == "divide") {
+            operator = divide;
+        } else if (save.id == "multiply") {
+            operator = multiply;
+        } else if (save.id == "minus") {
+            operator = substract;
+        } else {
+            operator = add;
+        }
+
+        input.value = 0;
+    });
+}
+
+equals.addEventListener("click", function() {
+    num2 = input.value;
+
+    input.value = calculate(num1, num2, operator);
+});
+
+function divide(num1, num2) {
+    return num1 / num2;
+}
+
+function multiply(num1, num2) {
+    return num1 * num2;
+}
+
+function add(num1, num2) {
+    return num1 + num2;
+}
+
+function substract(num1, num2) {
+    return num1 - num2;
+}
+
+function calculate(num1, num2, operator) {
+    return operator(num1, num2);
 }
