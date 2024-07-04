@@ -61,6 +61,10 @@ button {
     height: 100px;
 }
 
+button:active {
+    transform: scale(0.9);
+}
+
 .num {
     background-color: lightsteelblue;
 }
