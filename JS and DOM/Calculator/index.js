@@ -1,25 +1,13 @@
-var one = document.querySelector("#one");
-var two = document.querySelector("#two");
-var three = document.querySelector("#three");
-var four = document.querySelector("#four");
-var five = document.querySelector("#five");
-var six = document.querySelector("#six");
-var seven = document.querySelector("#seven");
-var eight = document.querySelector("#eight");
-var nine = document.querySelector("#nine");
-var zero = document.querySelector("#zero");
 var divi = document.querySelector("#divi");
 var multi = document.querySelector("#multi");
 var minus = document.querySelector("#minus");
 var plus = document.querySelector("#plus");
 var ce = document.querySelector("#ce");
 var back = document.querySelector("#back");
-var dot = document.querySelector("#dot");
 var equals = document.querySelector("#equals");
 var input = document.querySelector("input");
 
 var nums = document.querySelectorAll(".num");
-var saves = document.querySelectorAll(".save");
 
 var num1 = 0;
 var num2 = 0;
