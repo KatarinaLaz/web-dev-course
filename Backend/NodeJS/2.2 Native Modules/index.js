@@ -1,7 +1,7 @@
 const fs = require("fs")
 
 // we will use the .writeFile function to create a file - if we don't specify a file path, it will create it in this folder
-// fs.writeFile(file, data[, options], callback);
+// fs.writeFile(file, data, [options], callback);
 // -file => name (ant path) of the file
 // -data - the data that we want to write
 // -callback - we can use it to return and throw an error if there is one, or confirm that the file is saved if there isn't one
